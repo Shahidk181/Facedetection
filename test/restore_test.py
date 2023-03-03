@@ -87,7 +87,9 @@ class TrainTest(unittest.TestCase):
         self.assertAlmostEqual(b_reference, b_restored, 'Restored model use different weight than the original model')
 
 
-    @unittest.skip("Skip restore EMA test case for now")
+
+
+    @unittest.skip("Skip restore EMA test case for now")   #code working for
     def test_restore_ema(self):
         
         # Create 100 phony x, y data points in NumPy, y = x * 0.1 + 0.3
@@ -115,7 +117,7 @@ class TrainTest(unittest.TestCase):
         # Before starting, initialize the variables.  We will 'run' this first.
         init = tf.global_variables_initializer()
 
-        saver = tf.train.Saver(tf.trainable_variables())
+        saver = tf.train.Saver(tf.trainable_variables())  # this code is doing
         
         # Launch the graph.
         sess = tf.Session()
